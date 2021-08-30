@@ -1,0 +1,93 @@
+.conatiner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  width: 280px;
+  min-height: 330px;
+  background-color: #ddd;
+  margin: 2rem 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: 0.3s all linear;
+}
+
+.card:hover {
+  transform: scale(1);
+}
+
+img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card .details {
+  padding: 1rem;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h5 {
+  color: #111;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.card p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.card span {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.details button {
+  background-color: #111;
+  outline: none;
+  border: 2px solid #111;
+  width: 120px;
+  border-radius: 3px;
+  padding: 8px 0;
+  display: inline-block;
+  text-align: center;
+  transition: 0.3s linear all;
+}
+
+button a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  line-height: 100%;
+}
+
+.details button:hover {
+  background-color: #ddd;
+}
+
+.details button:hover a {
+  color: #111;
+}

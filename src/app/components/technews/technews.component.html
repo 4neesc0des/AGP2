@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Technology News</h2>
+  <div class="row">
+    <div class="card" *ngFor="let item of techHeading">
+      <img
+        *ngIf="item.urlToImage != null; else altImage"
+        src="{{ item.urlToImage }}"
+        alt=""
+      />
+
+      <ng-template #altImage>
+        <img src="../../../assets/alternate-img.jpg" alt="" />
+      </ng-template>
+
+      <div class="details">
+        <h5>{{ item.title }}</h5>
+        <div>
+          <span *ngIf="item.author != null; else elseAutor"
+            >~ {{ item.author }}</span
+          >
+          <ng-template #elseAutor> ~ {{ item.source.name }} </ng-template>
+          <!-- <p>{{ item.description }}</p> -->
+        </div>
+        <button>
+          <a href="{{ item.url }}" target="_blank"> Read More</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
